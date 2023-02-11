@@ -1,0 +1,15 @@
+Arrays
+
+Declaration of array:
+int Arr[] = {1, 2, 3, 4, 5}, declaration and initialization
+int Arr[5]; // only declaration, it will containt garbage values
+int Arr[] = {0} // initialization of all array items to 0
+int Arr[3] = {1} // [1|0|0]
+
+------------------------------------------------------------------
+Static vs Dynamic Array
+Once created, arrays cannot change their lenght! Array size is decided in compile time, memory is allocated during run time.
+Array size must be constant value.
+If we want to create dynamic size array, we need to use malloc and pointers, HEAP usage.
+
+p = (int *) malloc(5 * sizeof(int)) -> malloc returns void pointer (void *)

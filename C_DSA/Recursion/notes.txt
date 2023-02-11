@@ -1,0 +1,70 @@
+Recursion 101:
+
+Recursion always should have a base condition and once it is satisfied, it break out of it.
+calling (execution) phase and returning phase..
+
+Pseudo code:
+int f(int n)
+{
+    if (n > 0)
+    {
+        printf("%d\n", n); -> printing at execution time
+        f(n - 1);
+    }
+}
+
+Tracing:
+f(3) - print, f(2) - print f(1) - f(0) not > 0.. return
+
+1. Switch on bulb
+2. Go to next room
+--------------------------------------------------------
+
+int f(int n)
+{
+    if (n > 0)
+    {
+        f(n - 1);
+        printf("%d\n", n); -> printing at returning time time
+    }
+}
+
+Tracing: f(3) - f(2) - f(1) - f(0) not > 0.. return to f(1) - print.. f(2) - print.. f3(3) - print
+
+1. Go to next room
+2. Switch on bulb
+--------------------------------------------------------
+
+void fun(int n)
+{
+    <base condition>
+    {
+        1.calling (Ascending)
+        2.fun(n - 1)
+        3. returning (Descending)
+    }
+}
+
+Tail recursion:
+if in recursion call, the last statement is the function calling itself, it is called tail recursion. No process is done in returning part.
+Tail recursion is very easy to convert to loop, some compilers convert tail recursion to loops.
+
+Head recursion:
+The first statement in the body of the recursion needs to be the recursion function itself. Head recursion is hard to convert to loops.
+
+2^0 + 2^1 + 2^2 + 2^3 = (2 ^(3 + 1)) - 1 = 16 - 1 = 15 = O(2^n)
+
+i = 1
+n = n + i
+i++;
+---------
+n = 1 + 1;
+i++ = 2
+-----------
+n = 2 + 2
+-----------
+i = 3
+-----------
+n = 4 + 3
+-----------------
+Watch Quiz1 Solutions

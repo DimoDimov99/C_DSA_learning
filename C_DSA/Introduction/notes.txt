@@ -1,0 +1,74 @@
+Data structures
+---------------
+Arrangement of collection of data items, so they can be utilized effectivly.
+Data is kept in main memory.
+HDD/SSD - permament storage
+RAM - Random Access Memory - every program and process once started it is loaded in RAM.
+After turning off the machine, everything loaded in RAM is lost.
+----------------
+
+Main memory
+------------
+CPU
+||
+heap
+(Stack Frame) stack
+code section main()    <----------Program (MS word)
+------------
+In static memory allocation, in compile time it is decided the memory that it will occupy.
+Stack can be imaged with dirty dishesh in sink. Last in First out (LIFO)
+3 - pop
+2 - pop
+1 - pop
+------------
+Heap - unogranized memory. Heap memory is resouce once used, it should be released (free).
+We can access heap memory with pointer.
+------------
+
+Types of Data Structures:
+-------------------------
+Physical:
+1. Array -> int test_arr[5] = {1, 2, 3, 4, 5}; -> It can be created both in Heap and Stack
+2. Linked List -> Head -> [8|]->[6|]->... It is always created in Heap. Head points to next item
+-------------------------
+Logical:
+1. Stack -  LIFO
+2. Queues - FIFO
+3. Trees
+4. Graph
+5. HashTable
+-------------------------
+
+What is ADT (Abstract DataType)
+1. Representation of Data
+2. Operation on Data
+
+List -> add, remove, search, sort.. etc Dynamic, not fixed sized like array.
+-------------------------
+
+Time and Space complexity (Big O notation)
+n -> some number of elements.
+O(n) -> linear
+
+do manipulation of elements of array:
+O(n)
+for (int i = 0; i < len; i++)
+{
+    CODE
+}
+
+O(n^2) (Nested loop is additional power)
+for (int i = 0; i < len; i++)
+{
+    for(int j = 0; j < len; j++)
+}
+-------------------------
+
+O(log2n) => when processing half
+
+If we process matrix all elements (is log(n^2)) since we have rows and columns, so two for loops.
+[      Column 0 Column 1 Column 2
+Row 0
+Row 1
+Row 2 ]
+-------------------------
